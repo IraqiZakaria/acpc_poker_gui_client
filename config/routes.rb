@@ -1,4 +1,6 @@
 AcpcPokerGuiClient::Application.routes.draw do
+  devise_for :users
+
   # Routes for MatchStart:
   match 'match_start/new' => 'match_start#new', :as => :new_match
   match 'match_start/rejoin' => 'match_start#rejoin', :as => :rejoin_match
