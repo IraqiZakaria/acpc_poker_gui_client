@@ -79,7 +79,7 @@ class Match
   def self.start_match(
     name,
     game_definition_key,
-    user_name = User.DEFAULT_NAME,
+    user_name = user.name,
     opponent_names = nil,
     seat = nil,
     number_of_hands = nil,

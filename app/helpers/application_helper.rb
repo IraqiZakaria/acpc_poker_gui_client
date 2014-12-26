@@ -79,14 +79,11 @@ module ApplicationHelper
   def user
     current_user
   end
-  # @return [String] The currently signed in user name. Defaults to +User.default_user_name+
+
   def user_name
-    name = begin
-      ActionController::HttpAuthentication::Basic::user_name_and_password(request).first
-    rescue NoMethodError # Occurs when no authentication has been done
-      User::DEFAULT_NAME
-    end
+    user.name
   end
+
   def help_link
     link_with_glyph(
       '',
