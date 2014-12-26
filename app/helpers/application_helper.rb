@@ -77,16 +77,7 @@ module ApplicationHelper
   end
 
   def user
-    return @user if @user
-    users = User.where name: user_name
-    @user = if users.empty?
-      u = User.new name: user_name
-      u.save!
-      u.reset_hotkeys!
-      u
-    else
-      users.shift
-    end
+    current_user
   end
   # @return [String] The currently signed in user name. Defaults to +User.default_user_name+
   def user_name
