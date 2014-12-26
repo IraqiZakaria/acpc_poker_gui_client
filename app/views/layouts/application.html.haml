@@ -12,4 +12,5 @@
       .app
         %p.notice= notice
         %p.alert= alert
+        = link_to('Logout', destroy_user_session_path, method: :delete)
         = yield
