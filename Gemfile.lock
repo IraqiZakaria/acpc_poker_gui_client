@@ -100,6 +100,15 @@ GEM
     daemon_controller (1.1.5)
     daemons (1.1.9)
     debug_inspector (0.0.2)
+    devise (3.2.3)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
+    devise_invitable (1.4.0)
+      actionmailer (>= 3.2.6, < 5)
+      devise (>= 3.2.0)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -261,6 +270,9 @@ DEPENDENCIES
   coffee-rails
   compass-rails (~> 1.0)
   contextual_exceptions
+  devise
+  devise_invitable
+  foreman
   god
   haml (~> 3.1)
   jquery-rails (~> 2.2)

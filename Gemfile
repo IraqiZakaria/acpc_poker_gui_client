@@ -107,3 +107,7 @@ group :development, :test do
   gem 'mocha', require: false
   gem 'rspec-rails-mocha', require: false
 end
+
+gem 'foreman'
+gem 'devise'
+gem 'devise_invitable'
