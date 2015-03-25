@@ -110,3 +110,4 @@ end
 
 gem 'foreman'
 gem 'devise'
+gem 'devise_invitable'

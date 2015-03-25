@@ -109,6 +109,9 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise_invitable (1.4.0)
+      actionmailer (>= 3.2.6, < 5)
+      devise (>= 3.2.0)
     diff-lcs (1.2.4)
     dotenv (0.7.0)
     erubis (2.7.0)
@@ -279,6 +282,7 @@ DEPENDENCIES
   compass-rails (~> 1.0)
   contextual_exceptions
   devise
+  devise_invitable
   foreman
   god
   haml (~> 3.1)
