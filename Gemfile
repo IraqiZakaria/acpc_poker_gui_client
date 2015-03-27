@@ -29,7 +29,7 @@ gem 'passenger', '~>4.0'
 gem 'god'
 
 # Poker logic
-gem 'acpc_dealer', '~> 2.0'
+gem 'acpc_dealer', git: 'git@github.com:builderworksco/acpc_dealer.git'
 gem 'acpc_poker_player_proxy', '~> 1.1'
 
 # Improved forms
