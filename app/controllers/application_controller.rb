@@ -22,4 +22,13 @@ class ApplicationController < ActionController::Base
     def user_params
       params.require(:user).permit(:email, :name, :password, :password_confirmation)
     end
+
+  protected
+    def authenticate_inviter!
+      if current_user.admin == false
+        redirect_to :root, notify: 'Only admins can send invites'
+      else
+        super
+      end
+    end
 end

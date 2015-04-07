@@ -48,6 +48,8 @@ class User
   field :invitation_accepted_at, type: Time
   field :invitation_limit, type: Integer
 
+  field :admin, type: Boolean
+
   index( {invitation_token: 1}, {:background => true} )
   index( {invitation_by_id: 1}, {:background => true} )
 
