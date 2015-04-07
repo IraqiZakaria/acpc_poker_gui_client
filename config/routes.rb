@@ -16,6 +16,8 @@ AcpcPokerGuiClient::Application.routes.draw do
   match 'reset_hotkeys' => 'player_actions#reset_hotkeys', as: :reset_hotkeys
   match 'leave_match' => 'player_actions#leave_match', :as => :leave_match
 
+  resource :advertisements
+
   # Root of the site
   root :to => 'match_start#index'
 end
