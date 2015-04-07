@@ -9,13 +9,13 @@ class ApplicationController < ActionController::Base
     "please report this incident on the issue tracker, #{ApplicationDefs::ISSUE_TRACKER}"
   end
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :name
-  end
-
   private
     def user_params
-      params.require(:user).permit(:email, :name, :password, :password_confirmation)
+      params.require(:user).permit(:email, :name, :password,
+                                   :password_confirmation, :first_name,
+                                   :last_name, :country, :age, :ethnicity,
+                                   :highest_level_of_qualification,
+                                   :poker_experience)
     end
 
   protected

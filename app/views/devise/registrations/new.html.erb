@@ -5,7 +5,15 @@
 
   <div class="form-inputs">
     <%= f.input :email, :required => true, :autofocus => true %>
-    <%= f.input :name, :required => true, :autofocus => true %>
+    <%= f.input :name, label: 'Screen Name', required: true, autofocus: true %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :country, as: :select %>
+    <%= f.input :age %>
+    <%= f.input :ethnicity %>
+    <%= f.input :highest_level_of_qualification %>
+    <%= f.input :poker_experience, as: :text %>
+
     <%= f.input :password, :required => true %>
     <%= f.input :password_confirmation, :required => true %>
   </div>
