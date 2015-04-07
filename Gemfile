@@ -111,3 +111,5 @@ end
 gem 'foreman'
 gem 'devise'
 gem 'devise_invitable'
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem 'aws-sdk', '~> 1.3.4'

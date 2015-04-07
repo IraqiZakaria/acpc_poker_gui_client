@@ -1,0 +1,6 @@
+Upload a new advertisement
+
+<%= simple_form_for Advertisement.new do |f| %>
+  <%= f.file_field :image %>
+  <%= f.submit %>
+<% end %>
