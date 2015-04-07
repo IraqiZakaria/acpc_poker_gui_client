@@ -11,7 +11,9 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name,
+    :password, :password_confirmation, :first_name, :last_name, :country, :age,
+    :ethnicity, :highest_level_of_qualification, :poker_experience
 
   ## Database authenticatable
   field :email,              :type => String, :default => ""
@@ -49,6 +51,14 @@ class User
   field :invitation_limit, type: Integer
 
   field :admin, type: Boolean
+
+  field :first_name, type: String
+  field :last_name, type: String
+  field :country, type: String
+  field :age, type: Integer
+  field :ethnicity, type: String
+  field :highest_level_of_qualification, type: String
+  field :poker_experience, type: String
 
   index( {invitation_token: 1}, {:background => true} )
   index( {invitation_by_id: 1}, {:background => true} )
