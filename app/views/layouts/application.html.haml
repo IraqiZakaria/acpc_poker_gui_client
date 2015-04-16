@@ -7,10 +7,21 @@
     = csrf_meta_tag
     = yield(:head)
   %body
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %strong{:class => "navbar-brand"} Poker
+        %ul{:class => "nav navbar-nav navbar-right"}
+          - if current_user
+            %li{:class => "user"}
+              %a <i class='icon-user'></i> #{user.name}
+            %li
+              = link_to 'Logout', destroy_user_session_path, method: :delete
+          - else
+
+
     .container
-      = yield
+      //%p.notice= notice
+      %p.alert= alert
       .app
-        %p.notice= notice
-        %p.alert= alert
-        = link_to('Logout', destroy_user_session_path, method: :delete)
         = yield

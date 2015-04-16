@@ -22,7 +22,7 @@
     = f.input :random_seed, as: :integer, hint: 'Leave blank to use a random seed'
     .form-actions
       - start_match_label = "Start match"
-      = f.button :submit, class: 'btn-primary', data: { disable_with: start_match_label }, id: 'start_match', value: start_match_label
+      = f.button :submit, class: 'btn-primary btn-lg', data: { disable_with: start_match_label }, id: 'start_match', value: start_match_label
 
 :javascript
   BotSelection.makeDynamicAccordingToGameDef();

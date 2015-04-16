@@ -1,7 +1,90 @@
-.container
-  background: none
+// Nav
+
+.navbar
+  position: relative
+  min-height: 50px
+  margin-bottom: 20px
+  border-bottom: 3px solid darken(#01883b, 10%)
+
+.navbar-default
+  background: #01883b
+  background: -moz-linear-gradient(top,  #01883b 0%, #017a3d 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01883b), color-stop(100%,#017a3d))
+  background: -webkit-linear-gradient(top,  #01883b 0%,#017a3d 100%)
+  background: -o-linear-gradient(top,  #01883b 0%,#017a3d 100%)
+  background: -ms-linear-gradient(top,  #01883b 0%,#017a3d 100%)
+  background: linear-gradient(to bottom,  #01883b 0%,#017a3d 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01883b', endColorstr='#017a3d',GradientType=0 )
+
+.navbar-header
+  float: left
+
+.navbar-brand
+  float: left
+  padding: 15px
+  font-size: 24px
+  color: #ffffff
+  text-shadow: 1px 1px 0px darken(#01883b, 10%)
+  -webkit-font-smoothing: antialiased
+
+.navbar .nav > li > a
+  padding: 22px 15px 10px !important
+  color: #ffffff
+  text-shadow: 1px 1px 0px darken(#01883b, 10%)
+
+// Login
+
+.login 
   width: 100%
-  margin: 0
+  max-width: 600px
+  margin: 0 auto
+
+  input[type=email],
+  input[type=password]
+    width: 100%
+    padding: 7px 10px
+
+  .form-actions
+    padding-left: 0px !important
+
+
+// Forms
+
+.form-actions
+  background-color: white !important
+  border-top: 0px !important
+
+.btn-lg
+  font-size: 20px
+  padding: 10px 30px
+
+abbr[title]
+  color: #01883B
+  font-weight: 700
+  cursor: none !important
+  border-bottom: none !important
+
+//Buttons
+
+.btn-primary
+  background: #01883b
+  background: -moz-linear-gradient(top,  #01883b 0%, #017a3d 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#01883b), color-stop(100%,#017a3d))
+  background: -webkit-linear-gradient(top,  #01883b 0%,#017a3d 100%)
+  background: -o-linear-gradient(top,  #01883b 0%,#017a3d 100%)
+  background: -ms-linear-gradient(top,  #01883b 0%,#017a3d 100%)
+  background: linear-gradient(to bottom,  #01883b 0%,#017a3d 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01883b', endColorstr='#017a3d',GradientType=0 )
+  text-shadow: 1px 1px 0px darken(#01883b, 10%)
+
+//Alerts
+
+.alert
+  background-color: transparent
+  border: 1px solid transparent
+  color: red
+
+.container
 
   .chip_balances
     @extend .hero-unit
