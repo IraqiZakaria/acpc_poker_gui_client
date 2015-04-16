@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:builderworksco/acpc_dealer.git
+  remote: https://github.com/builderworksco/acpc_dealer
   revision: 9f41162c75bacce0f6f3618bb477affac2cc9c9d
   specs:
     acpc_dealer (2.3.2)
