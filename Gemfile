@@ -99,6 +99,7 @@ group :development do
   # because WeBrick needs a line of configuration
   # changed, otherwise it's impossibly slow 
   gem 'thin'
+
 end
 
 group :development, :test do

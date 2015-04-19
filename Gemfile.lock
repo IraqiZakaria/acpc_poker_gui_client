@@ -152,6 +152,7 @@ GEM
       railties (>= 3.1.0)
     json (1.8.0)
     kramdown (1.1.0)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -227,6 +228,7 @@ GEM
     redis (3.0.4)
     redis-namespace (1.3.1)
       redis (~> 3.0.0)
+    ref (1.0.5)
     require_reloader (0.2.0)
     rspec-core (2.14.5)
     rspec-expectations (2.14.1)
@@ -263,6 +265,9 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
     thin (1.5.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -335,6 +340,7 @@ DEPENDENCIES
   sass-rails
   sidekiq
   simple_form
+  therubyracer
   thin
   uglifier
   yard

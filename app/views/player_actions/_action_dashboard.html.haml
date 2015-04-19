@@ -19,7 +19,10 @@
             .slider_label.all_in All-in
           .slider
             .ui_slider
-        .wager_amount-num_field= number_field_tag :modifier, match_view.minimum_wager_to.to_i, min: match_view.minimum_wager_to.to_i, max: match_view.all_in.to_i, step: match_view.match.game_def.min_wagers[match_view.state.round].to_i, disabled: wager_disabled_when
+        .wager_amount-num_field
+          .wager_label
+            Wager Amount
+          = number_field_tag :modifier, match_view.minimum_wager_to.to_i, min: match_view.minimum_wager_to.to_i, max: match_view.all_in.to_i, step: match_view.match.game_def.min_wagers[match_view.state.round].to_i, disabled: wager_disabled_when
     .actions
       .poker_actn_btn
         - fold_label = 'Fold'
