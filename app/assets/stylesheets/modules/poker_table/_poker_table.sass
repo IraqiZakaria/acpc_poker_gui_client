@@ -4,8 +4,9 @@
 @import '../abstract/cards-defs'
 @import '../card/card-defs'
 
+
 .poker_table
-  margin-top: 30px
+  margin: 30px auto 0px
   @include zen-grid-container
   @include soft_edges($triad-color-2-dark, 100%, 500px 500px 500px 500px)
   +contrasted($l-poker_table-background-color)
@@ -14,6 +15,7 @@
   background-color: #01883b
   height: 447px
   border-color: #015525 !important
+  max-width: 95%
 
   *
     white-space: normal

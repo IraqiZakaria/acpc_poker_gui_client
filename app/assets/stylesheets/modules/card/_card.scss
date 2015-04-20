@@ -20,14 +20,23 @@
    @include zen-grid-container;
 
    $blank_card_color: $triad-color-3;
-   @include set_card_color($blank_card_color);
-
+   //@include set_card_color($blank_card_color);
+   background: #ffffff;
+   background: -moz-linear-gradient(top,  #ffffff 0%, #f9f9f9 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f9f9f9));
+   background: -webkit-linear-gradient(top,  #ffffff 0%,#f9f9f9 100%);
+   background: -o-linear-gradient(top,  #ffffff 0%,#f9f9f9 100%);
+   background: -ms-linear-gradient(top,  #ffffff 0%,#f9f9f9 100%);
+   background: linear-gradient(to bottom,  #ffffff 0%,#f9f9f9 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f9f9f9',GradientType=0 );
+   border: 1px solid #015525;
+   border-radius: 2px;
    height: $card_height;
    width: $card_width;
 
    position: relative;
 
-   color: #fff;
+   color: #222222;
 
    $card-column-count: 2;
    @include parent_grid($card-column-count, $l-card-margin);
@@ -57,12 +66,13 @@
 
       margin-top: $l-card-margin;
    }
-   @include background-image(linear-gradient(top left, darken($blank_card_color, 25%), $blank_card_color));
+   //@include background-image(linear-gradient(top left, darken($blank_card_color, 25%), $blank_card_color));
 
    .logo {
       // Include card logo like this:
       @include background-image(image-url('nick_morrill/chip_background.foggy.jpg'));
-
+     background-image: url('../images/bg_card.png');
+     background-position: center;
       height: $card_height;
 
       background-size: contain;
@@ -71,15 +81,13 @@
    }
 
    &#c {
-      @include set_card_color(#107010);
    }
    &#d {
-      @include set_card_color(#2020A0);
+      color: red !important;
    }
    &#h {
-      @include set_card_color(#B00101);
+      color: red !important;
    }
    &#s {
-      @include set_card_color(#303030);
    }
 }

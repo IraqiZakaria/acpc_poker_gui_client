@@ -5,7 +5,7 @@
   +parent_grid($l-poker_table-column-count)
   +zen-grid-item($l-poker_table-column-count, 1)
   +zen-nested-container
-
+  padding: 0px 20px
   $light_background_color: lighten($c-action_dashboard-background-color, $base-color-spread)
   +soft_edges($light_background_color)
   +contrasted($c-action_dashboard-background-color)
@@ -74,8 +74,35 @@
         height: 55px
 
         font-size: ($base-fontSize - 4) * 2
+        &.wager
+          background: #edb106
+          background: -moz-linear-gradient(top,  #edb106 0%, #dba206 100%)
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edb106), color-stop(100%,#dba206))
+          background: -webkit-linear-gradient(top,  #edb106 0%,#dba206 100%)
+          background: -o-linear-gradient(top,  #edb106 0%,#dba206 100%)
+          background: -ms-linear-gradient(top,  #edb106 0%,#dba206 100%)
+          background: linear-gradient(to bottom,  #edb106 0%,#dba206 100%)
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edb106', endColorstr='#dba206',GradientType=0 )
+          border: 1px solid #AF8205
+          text-shadow: 1px 1px 0px #AF8205
+        &.fold
+          background: #a30b07
+          background: -moz-linear-gradient(top,  #a30b07 0%, #990707 100%)
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a30b07), color-stop(100%,#990707))
+          background: -webkit-linear-gradient(top,  #a30b07 0%,#990707 100%)
+          background: -o-linear-gradient(top,  #a30b07 0%,#990707 100%)
+          background: -ms-linear-gradient(top,  #a30b07 0%,#990707 100%)
+          background: linear-gradient(to bottom,  #a30b07 0%,#990707 100%)
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a30b07', endColorstr='#990707',GradientType=0 )
+          border: 1px solid #720505
+          text-shadow: 1px 1px solid #720505
+
+
+
   &.limit
     height: $l-poker_actn_btn-height
     .meta_action
       button
         height: $l-poker_actn_btn-height - 2 * $default_border_width
+button.fold
+ 
