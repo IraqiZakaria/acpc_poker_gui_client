@@ -30,7 +30,7 @@ class Match
     field :name_from_user
     validates_presence_of :name_from_user
     validates_format_of :name_from_user, without: /^\s*$/
-    validates_uniqueness_of :name_from_user
+    # validates_uniqueness_of :name_from_user
   end
   def self.include_game_definition
     field :game_definition_key, type: Symbol
