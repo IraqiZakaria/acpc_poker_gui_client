@@ -11,6 +11,7 @@ require 'ap'
 # Controller for the main game view where the table and actions are presented to the player.
 # Implements the actions in the main match view.
 class PlayerActionsController < ApplicationController
+  skip_before_filter :authenticate_user!
   include ApplicationHelper
   include PlayerActionsHelper
 
