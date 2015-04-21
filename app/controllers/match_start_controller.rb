@@ -11,7 +11,6 @@ require 'match'
 
 # Controller for the 'start a new game' view.
 class MatchStartController < ApplicationController
-  skip_before_filter :authenticate_user!
   include ApplicationDefs
   include ApplicationHelper
   include MatchStartHelper
