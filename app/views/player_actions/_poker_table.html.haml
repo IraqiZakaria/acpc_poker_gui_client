@@ -1,4 +1,6 @@
 .poker_table
+  - if Advertisement.last.present?
+    = image_tag Advertisement.last.image.url, class: 'sponsor-image'
   = render partial: 'opponents'
   = render partial: 'community_information'
   = render partial: 'user'
