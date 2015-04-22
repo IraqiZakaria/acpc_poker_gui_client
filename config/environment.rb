@@ -16,9 +16,9 @@ AcpcPokerGuiClient::Application.configure do
   ActionMailer::Base.smtp_settings = {
       address:        'smtp.mandrillapp.com',
       port:           587,
-      domain:         '------CHANGE THIS--------',
-      user_name:      '------CHANGE THIS--------',
-      password:       '------CHANGE THIS--------',
+      domain:         'example.com',
+      user_name:      ENV['CMU_MANDRILL_USER_ID'],
+      password:       ENV['CMU_MANDRILL_USER_PASSWORD'],
       authentication: 'plain',
       enable_starttls_auto: true
   }
