@@ -11,6 +11,7 @@ require 'match'
 
 # Controller for the 'start a new game' view.
 class MatchStartController < ApplicationController
+  layout false, except: [:index]
   include ApplicationDefs
   include ApplicationHelper
   include MatchStartHelper

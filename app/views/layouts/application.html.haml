@@ -10,7 +10,7 @@
     .navbar.navbar-default
       .container-fluid
         .navbar-header
-          %strong{:class => "navbar-brand"} Brains vs. Artificial Intelligence
+          %strong{:class => "navbar-brand"}= link_to 'Brains vs. Artificial Intelligence', root_path
         %ul{:class => "nav navbar-nav navbar-right"}
           - if current_user
             %li{:class => "user"}
