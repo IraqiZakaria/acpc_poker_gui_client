@@ -29,10 +29,14 @@ class ApplicationController < ActionController::Base
 
   protected
     def authenticate_inviter!
-      if current_user.admin == false
-        redirect_to :root, notify: 'Only admins can send invites'
+      if current_user.present? && current_user.admin
+        current_user
       else
-        super
+        redirect_to :root, notify: 'Only admins can send invites'
       end
+    end
+
+    def authorize_admin
+      redirect_to root_path, alert: 'Access Denied' unless current_user.present? && current_user.admin?
     end
 end

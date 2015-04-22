@@ -1,5 +1,9 @@
 AcpcPokerGuiClient::Application.routes.draw do
-  devise_for :users, :controllers => { :invitations => 'devise/invitations' }
+  devise_for :users, :controllers => {
+    :invitations => 'devise/invitations',
+    :registrations => 'registrations'
+
+  }
 
   # Routes for MatchStart:
   match 'match_start/new' => 'match_start#new', :as => :new_match
