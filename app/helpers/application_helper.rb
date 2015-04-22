@@ -25,7 +25,7 @@ module ApplicationHelper
       error? do
         respond_to do |format|
           format.js do
-            render REPLACE_CONTENTS_JS, formats: [:js]
+            render REPLACE_CONTENTS_JS, formats: [:js], layout: false
           end
         end
       end
