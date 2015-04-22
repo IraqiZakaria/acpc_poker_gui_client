@@ -7,7 +7,7 @@ YAML::ENGINE.yamler= 'syck'
 # Initialize the rails application
 AcpcPokerGuiClient::Application.initialize!
 AcpcPokerGuiClient::Application.configure do
-  config.action_mailer.default_url_options = { host: 'localhost:3000',
+  config.action_mailer.default_url_options = { host: 'bellagio.amen.cs.cmu.edu:3000',
                                                from: 'CMU Poker <no-reply@example.com>',
                                                reply_to: 'CMU Poker <no-reply@example.com>'
   }
@@ -16,7 +16,7 @@ AcpcPokerGuiClient::Application.configure do
   ActionMailer::Base.smtp_settings = {
       address:        'smtp.mandrillapp.com',
       port:           587,
-      domain:         'example.com',
+      domain:         'bellagio.amen.cs.cmu.edu:3000',
       user_name:      ENV['CMU_MANDRILL_USER_ID'],
       password:       ENV['CMU_MANDRILL_USER_PASSWORD'],
       authentication: 'plain',

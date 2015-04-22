@@ -57,5 +57,6 @@ module AcpcPokerGuiClient
 
     # To autoreload bots/bots.rb
     RequireReloader.watch :bots
+    config.action_mailer.default_url_options = { host: 'bellagio.amen.cs.cmu.edu:3000'}
   end
 end
