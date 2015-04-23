@@ -76,6 +76,8 @@ class User
 
   include_name
 
+  after_create :reset_hotkeys!
+
   def reset_hotkeys!
     hotkeys.delete_all
     Hotkey::DEFAULT_HOTKEYS.each do |action, key|
