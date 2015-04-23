@@ -20,8 +20,8 @@
             %li
               - if current_user.admin
                 = link_to 'Invite', new_user_invitation_path
+            = yield(:nav_list)
           - else
-
 
     .container
       //%p.notice= notice
