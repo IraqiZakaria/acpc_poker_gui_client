@@ -1,4 +1,4 @@
-- content_for(:nav_list) do
+= content_for(:nav_list) do
   - customize_hotkeys = escape_javascript(render partial: 'customize_hotkeys')
   :javascript
     $('.modal-backdrop').remove();
