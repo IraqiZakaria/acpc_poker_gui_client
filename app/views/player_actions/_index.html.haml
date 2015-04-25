@@ -22,4 +22,19 @@
     = hidden_field_tag :match_state, match_view.state.to_s
     = submit_tag nil, class: update_state_html_class
 
+- customize_hotkeys = escape_javascript(render partial: 'customize_hotkeys')
+:javascript
+  $('.modal-backdrop').remove();
+  $('.customize').click(function() {
+    $('.tools').after("#{customize_hotkeys}");
+    $("##{customize_hotkeys_html_id}").on('hidden', function() {
+      $("##{customize_hotkeys_html_id}").remove();
+    });
+  });
+%ul.tools
+  %li.dropdown
+    %a.dropdown-toggle{role: 'button', :href => "#", :data => {:toggle => "dropdown"}}= 'Hotkeys <b class="caret"></b>'.html_safe
+    = render partial: 'hotkey_table', locals: { classes: ['dropdown-menu', 'dropdown_table'], right_column: ->(label, key) { key }, footer_partial: 'hotkey_dropdown_footer' }
+  %li
+    = link_to leave_match_label, leave_match_url, {remote: true, class: nav_leave_html_class, data: { confirm:  leave_match_confirmation_message, disable_with: leave_match_label }}
 = render partial: 'game_interface'
